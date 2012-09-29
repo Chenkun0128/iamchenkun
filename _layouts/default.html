@@ -3,22 +3,24 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <style type="text/css">
-@import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
-        @import url(http://fonts.googleapis.com/css?family=Neucha);
-
-        * { margin:0; }
-        body{
-            background: white;
-            color: #000305;
-            font-size: 95.5%; /* Base font size: 14px */
-            font-family: 'Trebuchet MS', Trebuchet, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            line-height: 1.429;
-            text-align: left;
-        }
+* { margin:0; }
+body{
+    background: white;
+    color: #000305;
+    font: 13px Helvetica, arial, freesans, clean, sans-serif;
+    line-height: 1.429;
+    text-align: center;
+    }
+.allpage{
+	text-align: left;
+	width: 960px;
+}
 </style>
 <title>{{page.title}}</title>
 </head>
 <body>
-{{content}}
+	<div class="allpage">
+		{{content}}
+	</div>
 </body>
 </html>

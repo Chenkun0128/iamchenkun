@@ -2,25 +2,58 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<style type="text/css">
-* { margin:0; }
-body{
-    background: white;
-    color: #000305;
-    font: 13px Helvetica, arial, freesans, clean, sans-serif;
-    line-height: 1.429;
-    text-align: center;
-    }
-.allpage{
-	text-align: left;
-	width: 960px;
-}
-</style>
 <title>{{page.title}}</title>
+<link rel="stylesheet" href="http://voorloopnul.com/static/css/pygment.css">
+        <style>
+        @import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+        @import url(http://fonts.googleapis.com/css?family=Neucha);
+
+        * { margin:0; }
+        body{
+            background: white;
+            color: #000305;
+            font-size: 95.5%; /* Base font size: 14px */
+            font-family: 'Trebuchet MS', Trebuchet, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            line-height: 1.429;
+            text-align: left;
+        }
+
+        a        { color:blue; }
+        a:active { color:blue; }
+        a:hover  { color:green; }
+
+
+        header, content, footer { display:block; width:70%; margin:auto;}
+
+        h2 { font-family: 'Neucha', cursive; margin:10px; }
+        p { margin:10px; }
+        b, strong { color:red }
+
+        header h1 { font-size: 5em; font-family: 'Covered By Your Grace'; text-align:center;}
+
+        .post-info {float:right; margin:10px; margin-top:0px;}
+        .back { font-size: 20px; margin:20px; text-align:center;}
+
+
+        .blog a { color: #A14732; text-decoration: none; font-family: 'Neucha', cursive; font-size:20px}
+        .blog a:hover { color: green; }
+
+        div.highlight { border:1px gray dashed; }
+        div.highlight pre { border-left:none; }
+        pre { border-left: 3px blue solid; padding-left:10px;}
+
+        textarea#messageme { width: 95%; border:1px gray solid; font-size:20px; padding:20px; }
+        </style>
+<script type="text/javascript">
+
+</script>
 </head>
 <body>
-	<div class="allpage">
-		{{content}}
-	</div>
+        <header>
+            <h1 id="page_title"> iamchenkun</h1>
+        </header>
+<content>
+{{content}}
+</content>
 </body>
-</html>
+

@@ -2,11 +2,31 @@
 layout: default
 title: 我的Blog
 ---
-<h2>{{ page.title }}</h2>
-<img src="{{site.baseurl}}/static/images/home_top.jpeg" alt=""/>
-<p>最新文章</p>
-<u>
+<span class="post-info">
+    <h2> On web </h2>
+    <ul>
+        <li><a href="#">Bitbucket</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+
+    <h2> Projects </h2>
+    <ul>
+        <li><a href="#">sendrac</a></li>
+    </ul>
+</span>
+
+
+<h2> About Me </h2>
+<p> My name is <b>Chen Kun</b> and I'm a developr/sysadmin who lives in
+Florianopolis/Brazil. I currently work part-time at Departament of
+Automation and Systens <a href="#">(DAS/UFSC)</a> and are doing my first semester of
+physics. I also avaiable to do freelance related to Linux, Python, Physics, Web, Django and Network.
+</p>
+
+<h2>Blog posts</h2>
+<ul class="blog">
 {%for post in site.posts%}
-    <li>{{post.date | date_to_string}} » <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
+    <li><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a> at {{post.date | date_to_string}} » </li>
 {%endfor%}
 </ul>

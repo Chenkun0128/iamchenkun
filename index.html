@@ -9,6 +9,7 @@ title: iamchenkun - chenkun's blog
         <li><a href="http://chenkun.cnblogs.com">Blog</a></li>
         <li><a href="http://weibo.com/chenkun0128">Sina</a></li>
         <li><a href="http://about.me/chenkun">About</a></li>
+        <li><a href="/atom.xml">RSS</a></li>
     </ul>
 
     <h2> Projects </h2>
@@ -23,7 +24,7 @@ SuZhou/JiangSu.
 
 <h2>Blog posts</h2>
 <ul class="blog">
-{%for post in site.posts%}
+{%for post in site.posts limit:5 %}
     <li><a href="{{post.url}}">{{post.title}}</a> at {{post.date | date_to_string}}</li>
 {%endfor%}
 </ul>

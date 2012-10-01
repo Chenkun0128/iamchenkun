@@ -1,0 +1,23 @@
+---
+layout: default
+isPost: true
+---
+<h2>{{page.title}}</h2>
+{{ content }}
+<p>{{page.date | date_to_string}}</p>
+<p>
+{% if page.previous %}
+<a href="{{ page.previous.url }}" rel="bookmark">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a>
+{% endif%}
+{% if page.next %}
+<a href="{{ page.next.url }}" rel="bookmark">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a>
+{% endif %}
+</p>
+<script type="text/javascript" charset="utf-8">
+var disqus_url = "http://imchenkun.com{{page.url}}";
+var disqus_developer = 1;
+</script>
+<div id = "disqus_thread"></div>
+<script type="text/javascript" src="http://disqus.com/forums/iamchenkun/embed.js"></script>
+<noscript><a href="http://disqus.com/forums/iamchenkun/?url=ref">View the discussion thread.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>

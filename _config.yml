@@ -1,1 +1,9 @@
 baseurl: /iamchenkun
+
+title: iamchenkun - chenkun's blog
+url: http://www.imchenkun.com
+feed: /atom.xml
+author:
+    name: chenkun
+    email: chenkun0128@gmail.com
+description: chenkun's blog host on github.com

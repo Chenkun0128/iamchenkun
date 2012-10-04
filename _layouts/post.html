@@ -10,7 +10,7 @@ isPost: true
 <a href="{{ page.previous.url }}" rel="bookmark">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a>
 {% endif%}
 {% if page.next %}
-<a href="{{ page.next.url }}" rel="bookmark">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ page.next.url }}" rel="bookmark">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a>
 {% endif %}
 </p>
 <!--

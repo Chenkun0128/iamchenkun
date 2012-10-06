@@ -1,0 +1,196 @@
+---
+layout: post
+title: 采用 Graphics.py 画图
+---
+<p>
+Graphices 是Python中的画图模块, 可以通过这个扩展模块来绘制各种简单的图形, Grahices 是基于 Python 内置的Tkinter模块扩展的一个绘图库！目前提供了9种绘图对象［Point, Line, Circle, Oval, Rectangle, Polygon, Text, Entry(text-based input), Image］! Graphices 的  GraphicsObject 实现了基础的方法, 如:draw(self, graphwin) 就是把当前对象绘制在Tkinter窗体上! Python 库种默认是没有提供Graphices模块的, 可以从<a href="/static/file/graphics.py">这里下载Graphices.py</a>
+</p>
+<p>
+下面我就来用Graphices绘制一个简单的1到6的数字纸牌来对这个库做个简单的了解, 这是最终的效果图:
+<img src="/static/images/post/graphic.png" />
+</p>
+<p>
+以下是代码:
+<pre>
+from graphics import *
+
+c = color_rgb(0, 0, 0)
+
+def one(win, p1 = Point(10, 10)):
+    p2 = Point(p1.x + 60, p1.y + 80)
+    r = Rectangle(p1, p2)
+    r.draw(win)
+
+    c1 = Circle(Point((p2.x + p1.x) / 2, (p2.y + p1.y) / 2), 5)
+    c1.draw(win)
+    c1.setFill(c)
+
+def two(win, p1 = Point(10, 10)):
+    p2 = Point(p1.x + 60, p1.y + 80)
+    r = Rectangle(p1, p2)
+    r.draw(win)
+
+    c1 = Circle(Point((p2.x + p1.x) / 2, p1.y + 15), 5)
+    c1.draw(win)
+    c1.setFill(c)
+
+    c2 = Circle(Point((p2.x + p1.x) / 2, p1.y + 65), 5)
+    c2.draw(win)
+    c2.setFill(c)
+
+def three(win, p1 = Point(10, 10)):
+    p2 = Point(p1.x + 60, p1.y + 80)
+    r = Rectangle(p1, p2)
+    r.draw(win)
+
+    c1 = Circle(Point((p2.x + p1.x) / 2, p1.y + 15), 5)
+    c1.draw(win)
+    c1.setFill(c)
+
+    c2 = Circle(Point((p2.x + p1.x) / 2, p1.y + 40), 5)
+    c2.draw(win)
+    c2.setFill(c)
+
+    c3 = Circle(Point((p2.x + p1.x) / 2, p1.y + 65), 5)
+    c3.draw(win)
+    c3.setFill(c)
+
+def four(win, p1 = Point(10, 10)):
+    p2 = Point(p1.x + 60, p1.y + 80)
+    r = Rectangle(p1, p2)
+    r.draw(win)
+
+    c1 = Circle(Point(p1.x + 15, p1.y + 15), 5)
+    c1.draw(win)
+    c1.setFill(c)
+
+    c2 = Circle(Point(p1.x + 15, p1.y + 65), 5)
+    c2.draw(win)
+    c2.setFill(c)
+
+    c3 = Circle(Point(p1.x + 40, p1.y + 15), 5)
+    c3.draw(win)
+    c3.setFill(c)
+    
+    c4 = Circle(Point(p1.x + 40, p1.y + 65), 5)
+    c4.draw(win)
+    c4.setFill(c)
+
+def five(win, p1 = Point(10, 10)):
+    p2 = Point(p1.x + 60, p1.y + 80)
+    r = Rectangle(p1, p2)
+    r.draw(win)
+
+    c1 = Circle(Point(p1.x + 15, p1.y + 15), 5)
+    c1.draw(win)
+    c1.setFill(c)
+
+    c2 = Circle(Point(p1.x + 15, p1.y + 65), 5)
+    c2.draw(win)
+    c2.setFill(c)
+
+    c3 = Circle(Point(p1.x + 40, p1.y + 15), 5)
+    c3.draw(win)
+    c3.setFill(c)
+    
+    c4 = Circle(Point(p1.x + 40, p1.y + 65), 5)
+    c4.draw(win)
+    c4.setFill(c)
+
+    c5 = Circle(Point((p2.x + p1.x) / 2, p1.y + 40), 5)
+    c5.draw(win)
+    c5.setFill(c)
+
+
+def six(win, p1 = Point(10, 10)):
+    p2 = Point(p1.x + 60, p1.y + 80)
+    r = Rectangle(p1, p2)
+    r.draw(win)
+
+    c1 = Circle(Point(p1.x + 15, p1.y + 15), 5)
+    c1.draw(win)
+    c1.setFill(c)
+    
+    c2 = Circle(Point(p1.x + 15, p1.y + 40), 5)
+    c2.draw(win)
+    c2.setFill(c)
+    
+    c3 = Circle(Point(p1.x + 15, p1.y + 65), 5)
+    c3.draw(win)
+    c3.setFill(c)
+
+    c4 = Circle(Point(p1.x + 40, p1.y + 15), 5)
+    c4.draw(win)
+    c4.setFill(c)
+    
+    c5 = Circle(Point(p1.x + 40, p1.y + 40), 5)
+    c5.draw(win)
+    c5.setFill(c)
+    
+    c6 = Circle(Point(p1.x + 40, p1.y + 65), 5)
+    c6.draw(win)
+    c6.setFill(c)
+
+def main():
+    win = GraphWin("iamchenkun", 425, 100)
+
+    # Point
+    # p =Point(100, 100)
+    # p.draw(win)
+
+    # for i in range(10):
+    #     p = Point(10 * i, 10 * i)
+    #     p.draw(win)
+
+    # Rectangle
+    # r = Rectangle(Point(10, 10), Point(100, 100))
+    # r.draw(win)
+
+    # Oval
+    # o = Oval(Point(10, 10), Point(100, 100))
+    # o.draw(win)
+
+    # Circle
+    # c = Circle(Point(100, 100), 50)
+    # c.draw(win)
+
+    # Line
+    # l = Line(Point(10, 10), Point(100, 100))
+    # l.draw(win)
+
+    # Polygon
+    # p = Polygon(Point(10, 10), Point(100, 10), Point(100, 100))
+    # p.draw(win)
+
+    # Text
+    # t = Text(Point(100, 10), "I am Chenkun")
+    # t.draw(win)
+
+    # Entry
+    # e = Entry(Point(100, 10), 10)
+    # e.draw(win)
+
+    # Image
+    # i = Image(Point(100, 10), (40, 40))
+    # i.draw(win)
+
+    # Demo
+    # c = Rectangle(Point(50, 30), Point(450, 230))
+    # c.draw(win)
+
+    one(win, Point(10, 10))
+    two(win, Point(80, 10))
+    three(win, Point(150, 10))
+    four(win, Point(220, 10))
+    five(win, Point(290, 10))
+    six(win, Point(360, 10))
+    
+    win.getMouse()
+    win.close()
+    
+main()
+</pre>
+</p>
+<p>
+可以看出使用Graphics库可以很简单的画出自己想要的图形, 比如稍微复杂点绘制一个展示当前CPU使用率的实时折线图! 只要动手做！
+</p>

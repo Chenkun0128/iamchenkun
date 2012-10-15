@@ -19,7 +19,7 @@ title: iamchenkun - chenkun's blog
 
 <h2>Blog posts</h2>
 <ul class="blog">
-{%for post in site.posts limit:6 %}
+{%for post in site.posts %}
     <li><a href="{{post.url}}">{{post.title}}</a> at {{post.date | date_to_string}}</li>
 {%endfor%}
 </ul>
